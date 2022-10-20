@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script defer type="text/javascript" src="js/validation.js"></script>
+    <meta charset="utf-8" />
+
+    <title>AKAI Frontend Task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+    <div class="background">
+        <!-- element section ma ID "task-frontend". Może to się nam przydać m.in. podczas stylowania dokumentu -->
+        <section id="task-frontend" class="center">
+
+            <div class="logo"></div>
+            <!-- element span otrzymuje klasę "basic-title". Klasa ta może być wykorzystywana w wielu różnych elementach -->
+            <span class="basic-title">Formularz rekrutacyjny AKAI</span>
+            <br />
+            <br />
+
+
+            <form id="form" method="POST">
+
+                <div class="input-control">
+                    <label class="text" for="first-name">Imię</label>
+                    <input type="text" name="fist-name" id="first-name" placeholder="Imie"/>
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label class="text" for="last-name">Nazwisko</label>
+                    <input type="text" name="last-name" id="last-name" placeholder="nazwisko"/>
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label class="text" for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="email">
+                    <div class="error"></div>
+                </div>
+
+                <br />
+
+                <span class="text">Co ciebie interesuje:</span>
+
+                <table id="sekcje" align="center">
+                    <tr>
+                        <th>
+                            <input class="checkbox" type="checkbox" id="frontend-checkbox" name="section" value="frontend">
+                            <label class="text" for="frontend-checkbox">Frontend</label>
+                        </th>
+                        <th>
+                            <input class="checkbox" type="checkbox" id="backend-checkbox" name="section" value="frontend">
+                            <label class="text" for="backend-checkbox">Backend</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input class="checkbox" type="checkbox" id="mobile-checkbox" name="section" value="frontend">
+                            <label class="text" for="mobile-checkbox">Mobile</label>
+                        </th>
+                        <th>
+                            <input class="checkbox" type="checkbox" id="graphics-checkbox" name="section" value="frontend">
+                            <label class="text" for="graphics-checkbox">Grafika</label>
+                        </th>
+                    <tr />
+                </table>
+                <div class="checkbox-error" id="checkbox-error"></div>
+                <br />
+                <input class="basic-button" type="submit" value="Aplikuj">
+            </form>
+
+        </section>
+    </div>
+</body>
+</html>
